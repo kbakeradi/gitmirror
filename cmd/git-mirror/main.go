@@ -15,8 +15,9 @@ func writeCmd(cmd string, args []string) {
 	fmt.Printf("%s %s\n", cmd, strings.Join(args, " "))
 }
 func main() {
-	fmt.Println("Git Mirror Command")
-
+	fmt.Println("## Git Mirror Command")
+	fmt.Println("##########################")
+	fmt.Println(" ")
 	// Settings
 	gitList := []gitData{
 		{
@@ -36,7 +37,7 @@ func main() {
 	fmt.Println("")
 	fmt.Println("")
 	fmt.Println("")
-	fmt.Println("----------- COPY AND RUN THE BELOW CODE ------------------")
+	fmt.Println("########## COPY AND RUN THE BELOW CODE ##########")
 	fmt.Println("")
 	fmt.Println("")
 
@@ -53,5 +54,5 @@ func main() {
 	}
 	fmt.Println("")
 	fmt.Println("")
-	fmt.Println("----------- COPY AND RUN THE ABOVE CODE ------------------")
+	fmt.Println("########## COPY AND RUN THE ABOVE CODE ##########")
 }

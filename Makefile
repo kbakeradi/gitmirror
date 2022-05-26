@@ -7,5 +7,10 @@ help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 	@echo ""
 
-run:
-	cd cmd/git-mirror && go run main.go && cd -
+run: ## run directly from go run
+	cd ./cmd/git-mirror && go run main.go && cd -
+build:	## build command
+	cd ./cmd/git-mirror && go build && cd -
+run-shell:	## build, run and output to shell command
+	make build
+	./cmd/git-mirror/git-mirror > run-me.sh
